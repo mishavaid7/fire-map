@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title> Florida Fires </title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+
+<body>
+    <div class="content-container">
+    <h4> Points Unknown | Housing Units Exposed Map </h4>
+    <h1> Visualizing Wildfire Risks to Homes Across Florida. </h1>
+    <p class="byline"> by Misha Vaid</p>
+    <em><p>  This is an exploratory map that has not been vetted by scientific experts. It was made as an assignment for the Points Unknown Web Mapping Class in June 2022.</p> </em>
+    <p> <em>Data source: U.S. Forest Services's <a href="https://wildfirerisk.org/download/">Wildfire Risk to Communities</a> accessed through <a href="https://brown-institute-assets.s3.amazonaws.com/Objects/pointsunknown/WildfireRiskToCommunities_County_Summary_2020-03-31.xlsx">The Brown Institute</a>. All code is available on <a href="https://github.com/mishavaid7/fire-map">GitHub</a>.</em></p>
+    
+    <p> According to a <a href="https://southeastfloridaclimatecompact.org/wp-content/uploads/2020/03/RCAP_Wildfire_Risk_Reduction_in_FL.pdf">2020 Report</a> by the Florida Department of Agriculture and Consumer Services, Division of Forestry, migration patterns are the biggest cause for concern when it comes to wildfire prevention in the state. 
+        "We continue to see the population growing in Florida’s wildland-urban interface areas. The number of wildfires impacting
+        residents and suppression costs also continue to grow."
+    </p>
+    <p> But which counties are more at risk?</p>
+
+    <p> One way to measure Wildfire risk, is to look at every county's total number of exposed Housing Units as a percentage of the total number of units. </p>
+
+    <p> But what exactly does this metric mean? According to the USDA wesbite, "Housing Unit Exposure is the expected number of housing units within a pixel potentially exposed to wildfire in a year. This is a long-term annual average and not intended to represent the actual number of housing units exposed in any specific year."</p>
+   </div>
+
+   <div class="chart-container">
+    <div class="float-child-left">
+        <h3> % of housing units exposed to wildfires </h3>
+        <hr/>
+
+        <div class="legend">
+            <div><span style="background-color: #efc22f",font-family="Roboto Mono"></span> 19% - 38% </div>
+            <div><span style="background-color: #ed9223"></span> 38% - 74% </div>
+            <div><span style="background-color: #e75d1e"></span> 74% - 86% </div>
+            <div><span style="background-color: #bd3f37"></span> 86% - 96% </div>
+            <div><span style="background-color: #7f3835"></span> 96% - 100% </div>
+
+</div>
+</div>
+<div class="float-child-right">
+
+    <div id='map'>
+        <div class='map-overlay' id='legend'></div>
+     </div>
+    <script type='text/javascript' src="map.js"></script>
+
+
+</body>
+
+</html>
+
